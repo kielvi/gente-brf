@@ -6,8 +6,8 @@ Aplicativo desenvolvido para a BR foods. Seu objetivo é validar dados de todos 
 - [Instalação](#instalação)
 - [Iniciando o projeto](#Iniciando-o-projeto)
 - [Api](#api)
-- [Metodologia BEM](#metodologia-bem)
-- [Demo] (#demo)
+- [Dependências](#dependencias)
+- [Demonstração] (#demonstracao)
 
 ### Instalação
 
