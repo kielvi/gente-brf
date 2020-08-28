@@ -1,6 +1,4 @@
 
-Este projeto foi iniciado com [Create React App](https://github.com/facebook/create-react-app).
-
 ## Gente BR foods
 
 Aplicativo desenvolvido para a BR foods. Seu objetivo é validar dados de todos funcionários da empresa no mundo todo e possibilitar o alteração de senha de e-mail acesso aos sistemas integrados Perdigão/Sadia
@@ -43,5 +41,5 @@ Todo o visual foi desenvolvido utilizando metologia BEM, para auxiliar na escrit
 
 ### Demontracação
 Para visualizar o funcionamento do projeto:
-Ambiente dev: https://brf-app-login-dev.azurewebsites.net/
-Produção: http://gente.brf.com/
+- Ambiente dev: https://brf-app-login-dev.azurewebsites.net/
+- Produção: http://gente.brf.com/
