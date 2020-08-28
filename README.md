@@ -7,6 +7,7 @@ Aplicativo desenvolvido para a BR foods. Seu objetivo é validar dados de todos 
 - [Iniciando o projeto](#Iniciando-o-projeto)
 - [Api](#api)
 - [Dependências](#dependencias)
+- [BEM](#bem)
 - [Demonstração] (#demonstracao)
 
 ### Instalação
@@ -35,11 +36,11 @@ Todos os dados do projeto são armazenados no ServiceNow BRF e manipulados atrav
 - [Yup]
 
 
-### Metodologia BEM
+### BEM
 Todo o visual foi desenvolvido utilizando metologia BEM, para auxiliar na escrita de um SASS/CSS mais inteligente, código reutilizável e sustentável. Além de convenções de nomeação, tornando mais informativo e fácil de entender.
 
 
-### Demontracação
+### Demonstração
 Para visualizar o funcionamento do projeto:
 - Ambiente dev: https://brf-app-login-dev.azurewebsites.net/
 - Produção: http://gente.brf.com/
