@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.be5e8255.chunk.css",
+    "main.js": "/static/js/main.c97c6b9f.chunk.js",
+    "main.js.map": "/static/js/main.c97c6b9f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
+    "static/js/2.773c9143.chunk.js": "/static/js/2.773c9143.chunk.js",
+    "static/js/2.773c9143.chunk.js.map": "/static/js/2.773c9143.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.be5505de3aff9dab43b057b0c5bfbb4f.js": "/precache-manifest.be5505de3aff9dab43b057b0c5bfbb4f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.be5e8255.chunk.css.map": "/static/css/main.be5e8255.chunk.css.map",
+    "static/js/2.773c9143.chunk.js.LICENSE.txt": "/static/js/2.773c9143.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/static/media/bg_mobile.fec7930f.svg",
+    "static/media/home.scss": "/static/media/register_icon.5a57df37.svg",
+    "static/media/states.scss": "/static/media/success_bg.3d9363f1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83c3e0c4.js",
+    "static/js/2.773c9143.chunk.js",
+    "static/css/main.be5e8255.chunk.css",
+    "static/js/main.c97c6b9f.chunk.js"
+  ]
+}

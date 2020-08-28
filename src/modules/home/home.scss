@@ -1,0 +1,238 @@
+﻿@import "../../assets/scss/mixins";
+
+.home {
+	width: 100%;
+	padding-top: 75px;
+	display: flex;
+	flex-flow: wrap;
+
+	// DESKTOP
+	@media (min-width: 1200px) {
+		height: 100vh;
+	}
+
+	&_choices {
+		flex: 1 0 100%;
+		padding: 0 15px;
+		display: flex;
+		flex-flow: wrap;
+		background: {
+			size: cover;
+			position: bottom center;
+			repeat: no-repeat;
+		}
+		align: {
+			items: flex-start;
+			content: flex-start;
+		}
+
+		// DESKTOP
+		@media (min-width: 1200px) {
+			flex: 1 0;
+			max-height: 100%;
+			padding: 0;
+		}
+
+		&-icon {
+			flex: 1 0;
+			max-width: 114px;
+			height: 109px;
+			margin-right: 15px;
+			background: {
+				size: contain;
+				position: center;
+				repeat: no-repeat;
+			}
+
+			// DESKTOP
+			@media (min-width: 1200px) {
+				flex: 1 0 100%;
+				margin-right: 0;
+				background: {
+					position: left top;
+					size: cover;
+				}
+			}
+
+			// MODIFIERS
+			&.-register {
+				background-image: url("../../assets/images/register_icon.svg");
+
+				// DESKTOP
+				@media (min-width: 1200px) {
+					width: 350px;
+					max-width: 350px;
+					height: 190px;
+				}
+			}
+			&.-login {
+				background-image: url("../../assets/images/login_icon.svg");
+
+				// DESKTOP
+				@media (min-width: 1200px) {
+					width: 198px;
+					max-width: 198px;
+					height: 190px;
+				}
+			}
+		}
+
+		&-label {
+			flex: 1 0;
+			@include fluidByHeight(16, 34, "font-size");
+			line-height: (44/36) * 100%;
+
+			// DESKTOP
+			@media (min-width: 1200px) {
+				flex: 1 0 100%;
+			}
+
+			// MODIFIERS
+			&.-title {
+				min-width: 228px;
+				font: {
+					family: "Co Text Corp";
+					weight: bold;
+				}
+				@include fluidByHeight(16, 34, "font-size");
+				line-height: (42/34) * 100%;
+
+				// DESKTOP
+				@media (min-width: 1200px) {
+					margin: {
+						top: (23/1080) * 100vh;
+						bottom: (42/1080) * 100vh;
+					}
+				}
+			}
+			&.-description {
+				flex: 1 0 100%;
+				padding: 6px 16px;
+				margin: 16px 0;
+				font: {
+					size: 16px;
+					weight: 500;
+				}
+				color: rgba(0, 0, 0, 0.54);
+				line-height: 175%;
+				/* @include fluidByHeight(14, 26, "font-size");
+				line-height: (46/26) * 100%; */
+				background: #ffffff;
+				border-radius: 8px;
+
+				strong {
+					font-weight: 900;
+				}
+				b {
+					font-weight: bold;
+				}
+			}
+			&.-obs {
+				flex: 1 0 100%;
+				margin-bottom: (23/1080) * 100vh;
+				@include fluidByHeight(16, 22, "font-size");
+				font: {
+					weight: 500;
+					style: italic;
+				}
+				line-height: (19/16) * 100% !important;
+			}
+		}
+
+		&-content {
+			flex: 1 0;
+			height: 100%;
+			padding: {
+				top: 22px;
+				bottom: 28px;
+			}
+			display: flex;
+			flex-flow: wrap;
+			justify-content: flex-start;
+			align: {
+				items: center;
+				content: flex-start;
+			}
+
+			// TABLET
+			@media (min-width: 748px) {
+				padding: 100px 0;
+			}
+
+			// DESKTOP
+			@media (min-width: 1200px) {
+				align: {
+					items: flex-start;
+					content: flex-start;
+				}
+			}
+		}
+
+		// MODIFIERS
+		&.-register {
+			background-image: url("../../assets/images/register_bg-mobile.svg");
+
+			// DESKTOP
+			@media (min-width: 1200px) {
+				background: {
+					image: url("../../assets/images/register_bg-desktop.svg");
+					position: right center;
+				}
+			}
+
+			.home_choices {
+				&-label {
+					color: #fff;
+				}
+
+				&-content {
+					// DESKTOP
+					@media (min-width: 1200px) {
+						padding: {
+							top: (77/1080) * 100vh;
+							left: (302/1920) * 100vw;
+							right: (55/1920) * 100vw;
+							bottom: 0;
+						}
+					}
+					@media (min-width: 2000px) {
+						padding-right: (280/2550) * 100vw;
+					}
+				}
+			}
+		}
+		&.-login {
+			.home_choices {
+				&-label {
+					&.-title {
+						color: #0065b3;
+					}
+				}
+
+				&-content {
+					// DESKTOP
+					@media (min-width: 1200px) {
+						padding: {
+							top: (77/1080) * 100vh;
+							left: (147/1920) * 100vw;
+							right: (147/1920) * 100vw;
+							bottom: 0;
+						}
+					}
+					@media (min-width: 2000px) {
+						padding-right: (280/2550) * 100vw;
+					}
+				}
+			}
+		}
+	}
+
+	&_login {
+		flex: 1 0 100%;
+
+		// DESKTOP
+		@media (min-width: 1200px) {
+			flex: 1 0;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+﻿@import "../../assets/scss/mixins";
+
+.heading {
+	width: 100%;
+	flex: 1 0 100%;
+	margin-bottom: 50px;
+	font: {
+		family: Co Text Corp;
+		weight: bold;
+	}
+	text-align: center;
+	color: #0065b3;
+	@include fluidByHeight(20, 26, "font-size");
+	line-height: (30/26) * 100%;
+	justify-content: center;
+
+	// MOBILE
+	@media (max-width: 320px) {
+		padding-top: 150px;
+	}
+
+	// DESKTOP
+	@media (min-width: 1200px) {
+		margin-bottom: (103/1080) * 100vh;
+	}
+
+	strong {
+		color: #f58220;
+	}
+
+	// MODIFIERS
+	&.-uppercase {
+		text-transform: uppercase;
+	}
+	&.-success {
+		margin-top: 50px;
+		@include fluidByHeight(34, 38, "font-size");
+		line-height: (33/34) * 100%;
+
+		// DESKTOP
+		@media (min-width: 1200px) {
+			margin-top: (112/1080) * 100vh;
+		}
+	}
+	&.-error {
+		margin-top: 50px;
+		@include fluidByHeight(34, 38, "font-size");
+		line-height: (33/34) * 100%;
+		color: #c8000e;
+
+		// DESKTOP
+		@media (min-width: 1200px) {
+			margin-top: (112/1080) * 100vh;
+		}
+	}
+}

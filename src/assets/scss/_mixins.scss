@@ -1,0 +1,56 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin fluid-font-size($min-size, $max-size, $min-break-point, $max-break-point) {
+	font-size: $min-size;
+	@media( min-width: $min-break-point ){
+	  font-size: calc(#{$min-size} + ((100vw - #{$min-break-point}) / #{strip-unit($max-break-point - $min-break-point)} ) * #{strip-unit($max-size - $min-size)});
+	}
+	@media( min-width: $max-break-point ){
+		font-size: $max-size;
+	}
+}
+
+
+
+@mixin fluidByHeight ($min, $max, $attribute, $breakpoint: 1080) {
+	@at-root{
+		%#{ $attribute + '' + $min + '' + $max} {
+			#{$attribute}: $min * 1px;
+
+			@media( min-height: #{$min/($max/$breakpoint) * 1px} ){
+				#{$attribute}: $max/$breakpoint * 100vh;
+			}
+
+			@media( min-height: $breakpoint * 1px ){
+				#{$attribute}: $max * 1px;
+			}
+		}
+		
+	}
+
+	@extend %#{ $attribute + '' + $min + '' + $max};
+}
+
+@mixin fluidByWidth ($min, $max, $attribute, $breakpoint: 1920) {
+	@at-root{
+		%#{ $attribute + '' + $min + '' + $max} {
+			#{$attribute}: $min * 1px;
+
+			@media( min-width: #{$min/($max/$breakpoint) * 1px} ){
+				#{$attribute}: $max/$breakpoint * 100vw;
+			}
+
+			@media( min-width: $breakpoint * 1px ){
+				#{$attribute}: $max * 1px;
+			}
+		}
+	}
+
+	@extend %#{ $attribute + '' + $min + '' + $max};
+}

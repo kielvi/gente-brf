@@ -1,0 +1,43 @@
+﻿@import "../../assets/scss/mixins";
+
+.paragraph {
+	flex: 1 0 100%;
+	display: flex;
+	flex-flow: wrap;
+	font: {
+		weight: 500;
+	}
+	@include fluidByHeight(16, 18, "font-size");
+	line-height: (30/18) * 100%;
+	justify-content: center;
+
+	strong {
+		font-weight: 900;
+	}
+
+	&_content {
+		// DESKTOP
+		@media (min-width: 1200px) {
+			max-width: (700/1920) * 100vw;
+		}
+
+		// MODIFIERS
+		&.-success {
+			margin-bottom: 50px;
+
+			// DESKTOP
+			@media (min-width: 1200px) {
+				margin-bottom: (166/1080) * 100vh;
+			}
+		}
+		&.-error {
+			text-align: center;
+			margin-bottom: 50px;
+
+			// DESKTOP
+			@media (min-width: 1200px) {
+				margin-bottom: (166/1080) * 100vh;
+			}
+		}
+	}
+}

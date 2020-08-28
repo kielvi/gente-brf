@@ -1,0 +1,79 @@
+@import "./mixins";
+
+.link {
+    flex: 0 0 auto;
+    padding: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-flow: wrap;
+    border-radius: 200px;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+    @include fluidByHeight(12, 14, "font-size");
+    line-height: (16/14) * 100%;
+    color: rgba(0, 0, 0, 0.87);
+    align: {
+        items: center;
+        content: center;
+    }
+    transition: background-color 175ms ease-in, color 175ms ease-in;
+
+    // SMALL MOBILE
+    @media (max-width: 320px) {
+        padding: 17px 10px;
+    }
+
+    // DESKTOP
+    @media (min-width: 1200px) {
+        margin-top: 0;
+    }
+
+    &:hover {
+        transition: background-color 175ms ease-in, color 300ms ease-out;
+    }
+
+    // MODIFIERS
+    &.-yellow {
+        background: #fcaf17;
+        box-shadow: 0px 4px 8px rgba(#000, 0.2);
+
+        &:after {
+            width: 10px;
+            height: 17px;
+            margin-left: 11px;
+            content: "";
+            background: {
+                image: url("data:image/svg+xml,%3Csvg width='11' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M1.252.689c.2 0 .402.067.571.2l8.837 7.108a.912.912 0 010 1.42l-8.8 7.071a.91.91 0 01-1.14-1.42l7.915-6.36L.681 2.31a.91.91 0 01.57-1.62z'/%3E%3C/svg%3E");
+                size: contain;
+                repeat: no-repeat;
+            }
+        }
+
+        &:hover {
+            background: #fca317;
+            color: #000;
+        }
+    }
+    &.-blue {
+        background: #0065b3;
+        box-shadow: 0px 4px 8px rgba(#000, 0.2);
+        color: #fff;
+
+        &:after {
+            width: 10px;
+            height: 17px;
+            margin-left: 11px;
+            content: "";
+            background: {
+                image: url("data:image/svg+xml,%3Csvg width='11' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFFFFF' d='M1.252.689c.2 0 .402.067.571.2l8.837 7.108a.912.912 0 010 1.42l-8.8 7.071a.91.91 0 01-1.14-1.42l7.915-6.36L.681 2.31a.91.91 0 01.57-1.62z' /%3E%3C/svg%3E");
+                size: contain;
+                repeat: no-repeat;
+            }
+        }
+
+        &:hover {
+            background: #035390;
+            color: #fff;
+        }
+    }
+}

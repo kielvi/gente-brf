@@ -1,0 +1,33 @@
+﻿@import "../../assets/scss/mixins";
+
+.input {
+	/* flex: 1 0 100%; */
+	width: 100%;
+	min-height: 48px;
+	padding: 0 48px 0 20px;
+
+	// DESKTOP
+	@media (min-width: 1200px) {
+		padding: 0 20px;
+	}
+
+	background: #ffff;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 8px;
+	font: {
+		size: 20px;
+		family: "Co Text Corp";
+		weight: normal;
+	}
+	line-height: 48px;
+	transition: border-color 175ms ease-in, color 175ms ease-in;
+
+	&[type="date"] {
+		padding-right: 40px;
+	}
+
+	&.-error {
+		border-color: #c8000e;
+		transition: border-color 300ms ease-out, color 300ms ease-out;
+	}
+}

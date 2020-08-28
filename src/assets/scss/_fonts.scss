@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$base_cotext: "../fonts/";
+
+@font-face {
+    src: url($base_cotext+'CoTextCorp-Regular.woff2') format('woff2'),
+         url($base_cotext+'CoTextCorp-Regular.woff') format('woff');
+    font: {
+        family: 'Co Text Corp';
+        weight: normal;
+        style: normal;
+        display: swap;
+    }
+}
+
+@font-face {
+    src: url($base_cotext+'CoTextCorp-Bold.woff2') format('woff2'),
+         url($base_cotext+'CoTextCorp-Bold.woff') format('woff');
+    font: {
+        family: 'Co Text Corp';
+        weight: bold;
+        style: normal;
+        display: swap;
+    }
+}
+
+@font-face {
+    src: url($base_cotext+'CoTextCorp-Light.woff2') format('woff2'),
+         url($base_cotext+'CoTextCorp-Light.woff') format('woff');
+    font: {
+        family: 'Co Text Corp';
+        weight: 300;
+        style: normal;
+        display: swap;
+    }
+}
+
+@font-face {
+    src: url($base_cotext+'CoTextCorp-Regular.woff2') format('woff2'),
+         url($base_cotext+'CoTextCorp-Regular.woff') format('woff');
+    font: {
+        family: 'Co Text Corp';
+        weight: normal;
+        style: normal;
+        display: swap;
+    }
+}
+

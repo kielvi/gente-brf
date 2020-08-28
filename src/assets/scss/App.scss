@@ -1,0 +1,65 @@
+@import "reset";
+@import "fonts";
+@import "links";
+@import "form";
+
+@import "container";
+
+
+
+:root {
+    --bg: #F2F2F2;
+    --default: rgba(#000, .87);
+    --default_hover: #F58220;
+    --blue_brf: #0065B3;
+    --blue_brf_hover: #035390;
+    --red: #C8000E;
+    --red_hover: #9e0510;
+    --orange: #F58220;
+    --green: #1C6226;
+    --green_hover: #1C6226;
+    --yellow: #FCAF17;
+    --yellow_hover: #fca317;
+    
+}
+
+body {
+    background: {
+        image: url('../images/bg_mobile.svg');
+        repeat: no-repeat;
+        position: center 10px;
+        color: #F2F2F2;
+        size: contain;
+    }
+    font: {
+        family: Roboto;
+        size: 14px;
+        weight: 400;
+    }
+    color: rgba(0, 0, 0, .87);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+
+    outline: none;
+
+        // DESKTOP
+        @media(min-width: 1200px) {
+            background: {
+                image: url('../images/bg.svg');
+                position: left top;
+            }
+        }
+}
+
+a {
+    color: rgba(0, 0, 0, .87);
+    text-decoration: none;
+    transition: color 175ms ease-in;
+    
+    &:hover {
+        color: #F58220;
+        text-decoration: none;
+        transition: color 300ms ease-out;
+    }
+}

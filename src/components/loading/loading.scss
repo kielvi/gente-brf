@@ -1,0 +1,122 @@
+@import "../../assets/scss/mixins";
+
+.loading {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &_image {
+        flex: 0 0 80px;
+		height: 80px;
+		margin-bottom: 17px;
+        animation: rotate 2s linear infinite;
+        -webkit-animation: rotate 2s linear infinite;
+        -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+		transform-origin: center center;
+		
+		&-path {
+			stroke-dasharray: 80,80;
+			stroke-dashoffset: -10;
+			-webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+			animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+			stroke-linecap: round;
+		}
+
+		// DESKTOP
+		@media(min-width: 1200px) {
+			margin-bottom: (17/1080) * 100vh;
+		}
+    }
+
+    &_text {
+        flex: 1 0 100%;
+		@include fluidByHeight(12, 16, 'font-size');
+		text-align: center;
+		line-height: (24/16) * 100%;
+	}
+
+	&.-mb132 {
+		margin-bottom: 50px;
+
+		// DESKTOP
+		@media(min-width: 1200px) {
+			margin-bottom: (132/1080) * 100vh;
+		}
+	}
+}
+
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes dash {
+    0% {
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124;
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124;
+    }
+}
+@-webkit-keyframes color {
+    0% {
+        stroke: #F58220;
+    }
+    40% {
+        stroke: #F58220;
+    }
+    66% {
+    stroke: #F58220;
+    }
+    80%, 90% {
+    stroke: #F58220;
+    }
+}
+@keyframes color {
+	0% {
+		stroke: #F58220;
+	}
+	40% {
+		stroke: #F58220;
+	}
+	66% {
+		stroke: #F58220;
+	}
+	80%, 90% {
+		stroke: #F58220;
+	}
+}
+  
